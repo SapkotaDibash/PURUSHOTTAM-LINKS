@@ -1,1 +1,64 @@
-LINKS
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Download Links | Purushottam Dhakal</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./script.js" defer></script>
+    <style>
+    *,
+    :after,
+    :before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        animation-timing-function: linear;
+        transition: 1s;
+
+    }
+
+    .container {
+        overflow-y: auto;
+        height: 100vh;
+        padding: 0.5rem;
+        padding-top: 0;
+        background-image: linear-gradient(to right, #f7eae9, #f2f1e9, #eaf2e9, #e9f2f2, #e9e9f2, #f2e9f2, #f2e9e9);
+    }
+
+    .links_container {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+    }
+
+    details {
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: .5em .5em 0;
+    }
+
+    details[open] {
+        padding: .5em;
+    }
+
+    details[open] summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: .5em;
+    }
+
+    summary {
+        font-weight: bold;
+        margin: -.5em -.5em 0;
+        margin-bottom: 0px;
+        padding: .5em;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+</body>
+
+</html>
