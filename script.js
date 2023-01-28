@@ -53,9 +53,12 @@ function createHTML() {
         const subLinks_HTM = subLinks(FILE_LINKS_OBJ[link_key])
 
 
+
+        let OPEN_STATUS = (i == 0) ? 'open' : '';
+
         const HTML = `            
    
-    <details class="detail">
+    <details class="detail" ${OPEN_STATUS}>
         <summary><strong>${r['display_name']}</strong></summary>
         <div class="links_container">${subLinks_HTM}</div>
     </details>
@@ -75,7 +78,7 @@ function subLinks(OBJ) {
     for (let i = 0; i < OBJ.length; i++) {
         const r = OBJ[i];
 
-        HTML_LINKS += `<a href="${r['link_obj']}">${r['display_name']}</a><br>`;
+        HTML_LINKS += `${i + 1}. <a href="${r['link_obj']}">${r['display_name']}</a><br>`;
     }
     return HTML_LINKS;
 }
@@ -84,7 +87,7 @@ function subLinks(OBJ) {
 
 
 
-$('summary').click(function() {
+$('summary').click(function () {
     $('.detail').removeAttr('open');
     $(this).attr('open')
 });
