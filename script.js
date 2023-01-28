@@ -13,7 +13,6 @@ const FILE_LINKS_OBJ = {
 
         { "display_name": 'File1', 'link_obj': './files/coop_imp_files/annual-report-template_developed-by-NCBL-2.docx' },
         { "display_name": 'File_2', 'link_obj': './files/coop_imp_files/BoD-Self-evaluation-final.xlsx' },
-
     ],
 
     "coop_imp_files_2": [
@@ -77,8 +76,8 @@ function subLinks(OBJ) {
     let HTML_LINKS = '';
     for (let i = 0; i < OBJ.length; i++) {
         const r = OBJ[i];
-
-        HTML_LINKS += `${i + 1}. <a href="${r['link_obj']}">${r['display_name']}</a><br>`;
+        const SN = ( i + 1).toString().padStart(2, 0);
+        HTML_LINKS += `${SN}. <a href="${r['link_obj']}">${r['display_name']}</a><br>`;
     }
     return HTML_LINKS;
 }
